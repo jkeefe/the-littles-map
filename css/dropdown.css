@@ -9,24 +9,3 @@
     border: 2px outset #DFF2FF;
     line-height:1.3em;
 }
-
-#dropdown h1 {font-size:18px; margin:0 0 4px 0;}
-#dropdown h2 {font-size:14px; margin:0;}
-
-#dropdown dl {margin:15px 0; float:left;}
-#dropdown dt {clear:both; float:right; height:20px; margin-left:10px; width:160px;}
-#dropdown dd {float:left; height:20px; width:20px; opacity:.75; margin:0;}
-#dropdown .less-than-minus-10 {background-color:#B35806;}
-#dropdown .less-than-minus-5  {background-color:#F1A340;}
-#dropdown .less-than-zero     {background-color:#FEE0B6;}
-#dropdown .zero               {background-color:#F7F7F7;}
-#dropdown .less-than-5        {background-color:#DADAEB;}
-#dropdown .less-than-10       {background-color:#BCBDDC;}
-#dropdown .less-than-25       {background-color:#9E9AC8;}
-#dropdown .less-than-50       {background-color:#807DBA;}
-#dropdown .less-than-100      {background-color:#6A51A3;}
-#dropdown .greater-than-100   {background-color:#4A1486;}
-
-#dropdown p {clear:both; margin:5px 0 0 0;}
-
-#dropdown #credits {font-size:10px; line-height:1.2em;}
