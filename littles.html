@@ -1,0 +1,138 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+
+  
+<title>The New Littles | Ancestry in NYC | WNYC</title> 
+
+<link rel="stylesheet" type="text/css" media="all"
+    href="http://media40.wnyc.net/media/css/screen.css" /> 
+<link rel="stylesheet" type="text/css" media="all"
+    href="http://media40.wnyc.net/media/css/screen_wnyc.css" /> 
+<!--[if lte IE 8]>
+    <link rel="stylesheet" type="text/css" media="all"
+    href="http://media40.wnyc.net/media/css/screen_ie.css" /><![endif]--> 
+<!--[if lt IE 8]>
+    <link rel="stylesheet" type="text/css" media="all"
+    href="http://media40.wnyc.net/media/css/screen_ie7.css" /><![endif]-->
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="css/dropdown.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="css/jquery.alerts.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.4&sensor=false"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>  
+
+<!-- Ability to parse variables from the URL done with jquery.url.js
+See http://ajaxcssblog.com/jquery/url-read-get-variables/  -->
+<script type="text/javascript" src="js/jquery.url.min.js"></script> 
+
+<!-- Share/Embed 'alert' box generated with jquery.alerts.js. 
+See http://abeautifulsite.net/blog/2008/12/jquery-alert-dialogs/ -->
+<script src="js/jquery.alerts.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Core mapping javascript is here -->
+<script type="text/javascript" src="js/map.js"></script>
+
+
+</head> 
+
+
+<body style="background:white">
+
+<!-- MAP TOP -->
+	<table border="0" cellspacing="0" cellpadding="0" style="height: 30px;">
+		<tr>
+			<td style="width: 80px;">	<a href="http://www.wnyc.org/"><img src="http://s3.amazonaws.com/wnyc-datadesk/images/wnyc_logo_tiny_30px.gif" alt="WNYC" title="WNYC" style="border: 0;"></a>
+		  </td>
+			<td style="font-size: 1.5em; color:#E01838;">
+			The New Littles
+			</td>
+
+
+				
+		</tr>
+	</table>
+	
+	<div id="headertext">
+	  If Italians have left Little Italy, where are the new Littles? What about little Poland? Little Korea? Andrew Beveridge of Social Explorer looked at census data to find NYC census tracts populated by least a 20% of any particular ancestry or ethnicity.
+	</div>
+	
+<!-- THE MAP -->
+<div id="map_canvas" style="height: 80%;"></div>
+
+<div id="dropdown"> 
+    <form action="">
+      <select id = 'map_menu' onchange='menuchange()'>
+        <option value="" selected="selected">Pick a Little ...</option>
+        
+        <option value="1008706,40.677,-73.758,12,1900">AMERICAN</option>
+        <option value="1008706,40.701,-73.769,12,0615">ASIAN INDIAN</option>
+        <option value="1008706,40.713,-73.789,14,0603">BANGLADESHI</option>
+        <option value="1008706,40.661,-73.913,15,0322">BRITISH WEST INDIAN </option>
+        <option value="1008706,40.685,-73.870,11,0706">CHINESE</option>
+        <option value="1008706,40.760,-73.883,14,0234">COLOMBIAN</option>
+        <option value="1008706,40.770,-73.890,11,0275">DOMINICAN</option>
+        <option value="1008706,40.738,-73.899,12,0235">ECUADORAN</option>
+        <option value="1008706,40.710,-73.817,13,0720">FILIPINO</option>
+        <option value="1008706,40.673,-74.010,14,0026">FRENCH </option>
+        <option value="1008706,40.767,-73.906,12,0032">GERMAN</option>
+        <option value="1008706,40.844,-73.913,16,0529">GHANIAN</option>
+        <option value="1008706,40.775,-73.910,14,0046">GREEK</option>
+        <option value="1008706,40.678,-73.943,13,0222">GUATEMALAN</option>
+        <option value="1008706,40.682,-73.818,13,0370">GUYANESE</option>
+        <option value="1008706,40.651,-73.844,11,0336">HAITIAN</option>
+        <option value="1008706,40.717,-73.952,13,0125">HUNGARIAN</option>
+        <option value="1008706,40.712,-73.947,11,0050">IRISH</option>
+        <option value="1008706,40.706,-73.958,11,0051">ITALIAN</option>
+        <option value="1008706,40.769,-73.812,11,0308">JAMAICAN</option>
+        <option value="1008706,40.743,-73.880,11,0750">KOREAN</option>
+        <option value="1008706,40.720,-73.964,11,0210">MEXICAN</option>
+        <option value="1008706,40.733,-73.932,13,0237">PERUVIAN</option>
+        <option value="1008706,40.719,-73.926,13,0142">POLISH</option>
+        <option value="1008706,40.737,-73.895,11,0261">PUERTO RICAN</option>
+        <option value="1008706,40.583,-73.965,13,0148">RUSSIAN</option>
+        <option value="1008706,40.692,-73.807,14,0226">SALVADORAN</option>
+        <option value="1008706,40.594,-73.962,15,0429">SYRIAN</option>
+        <option value="1008706,40.757,-73.935,15,0776">THAI</option>
+        <option value="1008706,40.677,-73.958,15,0314">TRINIDAD / TOBOGONIAN</option>
+        <option value="1008706,40.755,-73.834,14,1700">OTHER ASIAN </option>
+        <option value="1008706,40.654,-73.933,14,1500">OTHER SUB SAHARAN AFRICAN</option>
+        <option value="1008706,40.669,-73.906,14,0335">OTHER WEST INDIAN</option>
+
+      </select>
+		</form>
+    </div> 
+</div>
+
+
+<!-- MAP FOOTER -->
+
+<table border="0" cellspacing="0" cellpadding="1" style="width:500px; line-height: 1em !important;">
+	<tr>
+
+
+    <td>
+		  <div style="font-size: .9em; text-align:left; width:400px;">
+			<strong>Map: </strong><a href="mailto:jkeefe@wnyc.org?subject=Littles_Map_Feedback">John Keefe</a>/WNYC<br><strong>Data: </strong>Andrew Beveridge/<a href="http://www.socialexplorer.com/pub/home/home.aspx" target="_blank">Social Explorer</a>
+			& <a href="http://www.census.gov/acs/www/" title="American Community Survey">US Census</a>
+		  </div>
+		</td>
+
+		<td>&nbsp;</td>
+		<td style="text-align:center;">
+			<div id="embed" style="cursor:pointer; font-size:.9em;" onclick="embedBox()">
+				Share or Embed
+			</div>
+			<div id="expand" onclick="expandWindow()">
+			  Full window
+			</div>
+		</td>
+		<td>&nbsp;</td>
+		
+	</tr>
+</table>
+
+
+</body> 
+</html>
